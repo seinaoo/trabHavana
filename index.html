@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animais - Clínica Veterinária</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Animais - Clínica Veterinária</h1>
+    <p>Bem-vindo! Aqui você pode visualizar diretamente o código dos arquivos do projeto.</p>
+
+    <h2>Conteúdo de <code>Animal.java</code></h2>
+    <pre>
+public abstract class Animal {
+    private String nome;
+    private int idade;
+
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public abstract void emitirSom();
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+}
+    </pre>
+
+    <h2>Conteúdo de <code>Cachorro.java</code></h2>
+    <pre>
+public class Cachorro extends Animal {
+    public Cachorro(String nome, int idade) {
+        super(nome, idade);
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("Au au!");
+    }
+}
+    </pre>
+
+    <h2>Conteúdo de <code>Gato.java</code></h2>
+    <pre>
+public class Gato extends Animal {
+    public Gato(String nome, int idade) {
+        super(nome, idade);
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("Miau!");
+    }
+}
+    </pre>
+
+    <h2>Conteúdo de <code>Passaro.java</code></h2>
+    <pre>
+public class Passaro extends Animal {
+    public Passaro(String nome, int idade) {
+        super(nome, idade);
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println("Piu piu!");
+    }
+}
+    </pre>
+
+    <h2>Conteúdo de <code>App.java</code></h2>
+    <pre>
+public class App {
+    public static void main(String[] args) {
+        Animal cachorro = new Cachorro("Rex", 5);
+        Animal gato = new Gato("Mingau", 3);
+        Animal passaro = new Passaro("Piu-Piu", 1);
+
+        cachorro.emitirSom();
+        gato.emitirSom();
+        passaro.emitirSom();
+    }
+}
+    </pre>
+
+    <footer>
+        <p>Desenvolvido por Samuel Fortunato, Victor Leonardo e João Matheus.</p>
+    </footer>
+</body>
+</html>
